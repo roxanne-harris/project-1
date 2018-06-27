@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--
+  <h2>Welcome to registration page</h2>
+  -->
+
+  <ion-list>
+      <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      <ion-item inset>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Confirm Password</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+    </ion-list>
+  
+  
+    <div padding>
+      <button ion-button block (click)="navigateToProfile()">Sign In</button>
+    </div>
+
+    <div padding>
+      <ion-item no-lines text-center>
+          <a href="http://localhost:8100/#/login">Already have an account?</a>
+      </ion-item>
+      <!-- <button ion-button block (click)="navigateToRegistration()">Register</button> -->
+      
+  </div>
+
+
+
+</ion-content>
