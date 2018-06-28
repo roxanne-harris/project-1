@@ -7,17 +7,19 @@
 <ion-content padding>
   <!--
   <h2>Welcome to login page</h2>
+  {{ email }}
+  <ion-input [(ngModel)]="email"></ion-input>
+  <button ion-button (click)="pressMe(email, 50)">Button</button>
   -->
 
-  
   <ion-list>
     <ion-item inset>
       <ion-label floating>Email</ion-label>
-      <ion-input type="text" value=""></ion-input>
+      <ion-input [(ngModel)]="email" type="text" value=""></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
     </ion-item>
   </ion-list>
 
@@ -34,4 +36,21 @@
       
   </div>
 
+  <!-- 
+  going to let us use each one
+  <div *ngFor="let name of names">
+    {{name}}
+  </div>
+  -->
+
+  <!--
+  <div *ngIf=”flag == true”>  Render this </div>
+  -->
+
 </ion-content>
+
+<!--
+  boundaries
+  timer
+  track player (m)
+-->

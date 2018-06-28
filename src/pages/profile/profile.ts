@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { ProviderPage } from '../provider/provider';
 
 
 @Component({
@@ -27,6 +28,10 @@ export class ProfilePage {
   navigateToHomeSetRoot() {
     console.log("Home...");
     this.navCtrl.setRoot(HomePage);
+  }
+
+  navigateToProviderSetRoot() {
+    this.navCtrl.setRoot(ProviderPage);
   }
 
   

@@ -10,9 +10,12 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { RegistrationPage } from '../pages/registration/registration';
 import { ProfilePage } from '../pages/profile/profile';
+import { ProviderPage } from '../pages/provider/provider';
+import { DetailsPage } from '../pages/details/details';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 
 
@@ -33,7 +36,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     LoginPage,
     RegistrationPage,
-    ProfilePage
+    ProfilePage,
+    ProviderPage,
+    DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
         { component: HomePage, name: 'Home', segment: 'home' },
         { component: LoginPage, name: 'Login', segment: 'login' },
         { component: RegistrationPage, name: 'Registration', segment: 'registration' },
-        { component: ProfilePage, name: 'Profile', segment: 'profile' }
+        { component: ProfilePage, name: 'Profile', segment: 'profile' },
+        { component: ProviderPage, name: 'Provider', segment: 'provider'},
+        { component: DetailsPage, name: 'Details', segment: 'details'}
       ]
     }),
   ],
@@ -55,7 +62,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     LoginPage,
     RegistrationPage,
-    ProfilePage
+    ProfilePage,
+    ProviderPage,
+    DetailsPage
   ],
   providers: [
     StatusBar,
