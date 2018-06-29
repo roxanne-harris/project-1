@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, MenuController } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
@@ -10,11 +10,15 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { RegistrationPage } from '../pages/registration/registration';
 import { ProfilePage } from '../pages/profile/profile';
-import { ProviderPage } from '../pages/provider/provider';
-import { DetailsPage } from '../pages/details/details';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ProductsPage } from '../pages/products/products';
+import { ProductPage } from '../pages/product/product';
+import { ProductService } from '../services/product.service';
+import { CartPage } from '../pages/cart/cart';
+import { CartService } from '../services/cart.service';
+import { CheckoutPage } from '../pages/checkout/checkout';
 
 
 
@@ -37,8 +41,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     RegistrationPage,
     ProfilePage,
-    ProviderPage,
-    DetailsPage
+    ProductsPage,
+    ProductPage,
+    CartPage,
+    CheckoutPage
   ],
   imports: [
     BrowserModule,
@@ -48,8 +54,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
         { component: LoginPage, name: 'Login', segment: 'login' },
         { component: RegistrationPage, name: 'Registration', segment: 'registration' },
         { component: ProfilePage, name: 'Profile', segment: 'profile' },
-        { component: ProviderPage, name: 'Provider', segment: 'provider'},
-        { component: DetailsPage, name: 'Details', segment: 'details'}
+        { component: ProductsPage, name: 'Products', segment: 'products'},
+        //{ component: ProductPage, name: 'Product', segment: 'product'}
       ]
     }),
   ],
@@ -63,12 +69,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     RegistrationPage,
     ProfilePage,
-    ProviderPage,
-    DetailsPage
+    ProductsPage,
+    ProductPage,
+    CartPage,
+    CheckoutPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    ProductService,
+    CartService,
+    MenuController,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

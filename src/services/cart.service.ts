@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 export class CartService {
 
     private selectedProducts: Array<Product>;
-    private totalAmount: double;
+    private totalAmount: number;
 
     constructor() {
         this.selectedProducts = [];
